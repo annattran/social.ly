@@ -9,8 +9,10 @@ $(document).ready(function () {
         const emailService = emailDomain.substr(0, emailDomain.indexOf('.'));
         const checkbox = $('#checkbox').is(':checked');
 
-        if (name === '' || email == - '') {
-            alert('Name and email must be filled out')
+        const emailFormat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+        if (name === '' || email == - '' || emailFormat.test(email) === false) {
+            alert('Name and email must be filled out. Make sure email address is valid.')
         } else {
             if (checkbox === false) {
                 alert('You must agree to the terms and conditions')
