@@ -168,11 +168,13 @@ body {
     }
 
     label {
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 13px;
         display: block;
     }
 
     input {
+        font-size: 14px;
         border: 2px solid $borderGrey;
         padding: 0 17px;
         color: $placeholderGrey;

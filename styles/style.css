@@ -388,10 +388,12 @@ body p {
   margin: 0 0 18px 0;
 }
 .form-container label {
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 13px;
   display: block;
 }
 .form-container input {
+  font-size: 14px;
   border: 2px solid #ECEDF2;
   padding: 0 17px;
   color: #8E8E90;
