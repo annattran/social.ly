@@ -1,0 +1,244 @@
+body {
+    font-family: $primaryFont;
+    color: $blackFont;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .modal-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #000000CC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .modal-box {
+        max-width: 380px;
+        width: 100%;
+        height: 305px;
+        background: white;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 36px;
+        text-align: center;
+        position: relative;
+
+        .close-button {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: #ECEDF2;
+            width: 24px;
+            height: 24px;
+            font-weight: 500;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        h2 {
+            margin: 11px 0;
+        }
+
+        img {
+            max-width: 120px;
+        }
+
+        p {
+            line-height: 24px;
+            margin: 0;
+        }
+    }
+
+    @media(min-width:800px) {
+        height: 100vh;
+    }
+
+    .pink {
+        color: $pinkFont;
+    }
+
+    p {
+        color: $greyFont;
+        line-height: 32px;
+
+        @media(max-width:800px) {
+            line-height: 25px;
+        }
+    }
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1440px) {
+        width: 70%;
+    }
+
+    @media(max-width:1055px) {
+        width: 80%;
+    }
+
+    @media(max-width:920px) {
+        width: 90%;
+    }
+
+    @media(max-width:800px) {
+        flex-direction: column;
+        padding: 50px 0;
+    }
+}
+
+.intro-container {
+    padding: 60px 60px 30px 0;
+
+    @media(max-width:800px) {
+        padding: 0 0 30px 0;
+        max-width: 408px;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width: 127px;
+    }
+
+    h1 {
+        font-size: 64px;
+        margin: 20px 0;
+
+        @media(max-width:800px) {
+            font-size: 40px;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 445px;
+
+        @media(max-width:800px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.form-container {
+    padding: 50px 30px;
+    border: 1px solid $borderGrey;
+    border-radius: 24px;
+    position: relative;
+    max-width: 408px;
+    width: 100%;
+
+    .badge {
+        position: absolute;
+        top: -15px;
+        left: -10px;
+        width: 145px;
+        height: 46px;
+        background: $badgeYellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    h2 {
+        margin: 0 0 18px 0;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+    }
+
+    input {
+        border: 2px solid $borderGrey;
+        padding: 0 17px;
+        color: $placeholderGrey;
+
+        &[type="text"] {
+            width: 100%;
+            border-radius: 12px;
+            height: 44px;
+            margin: 6px 0px 18px 0px;
+        }
+
+        &[type="checkbox"] {
+            margin-right: 8px;
+            opacity: 0;
+        }
+
+    }
+
+    label[for="checkbox"] {
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .checkmark {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
+            height: 16px;
+            width: 16px;
+            border: 2px solid $borderGrey;
+        }
+
+        input:checked~.checkmark {
+            background: $pinkFont;
+            border-color: $pinkFont;
+        }
+    }
+
+    strong {
+        text-decoration: underline;
+        font-weight: 500;
+        padding-left: 5px;
+    }
+
+    input[type="submit"] {
+        background: $pinkFont;
+        color: white;
+        border-radius: 12px;
+        max-width: 348px;
+        width: 100%;
+        height: 54px;
+        font-weight: 500;
+        border: none;
+        font-size: 16px;
+        margin-top: 32px;
+
+        &:hover {
+            background: #d10761;
+        }
+    }
+}
+
+* {
+    // outline: 1px solid red;
+}

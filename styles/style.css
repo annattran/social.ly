@@ -1,0 +1,453 @@
+@charset "UTF-8";
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: “”‘’;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  color: #1E1F22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+body .modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+body .modal-box {
+  max-width: 380px;
+  width: 100%;
+  height: 305px;
+  background: white;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 36px;
+  text-align: center;
+  position: relative;
+}
+body .modal-box .close-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #ECEDF2;
+  width: 24px;
+  height: 24px;
+  font-weight: 500;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 0;
+}
+body .modal-box .close-button:hover {
+  cursor: pointer;
+}
+body .modal-box h2 {
+  margin: 11px 0;
+}
+body .modal-box img {
+  max-width: 120px;
+}
+body .modal-box p {
+  line-height: 24px;
+  margin: 0;
+}
+@media (min-width: 800px) {
+  body {
+    height: 100vh;
+  }
+}
+body .pink {
+  color: #FD0272;
+}
+body p {
+  color: #828691;
+  line-height: 32px;
+}
+@media (max-width: 800px) {
+  body p {
+    line-height: 25px;
+  }
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1440px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+@media (max-width: 1055px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media (max-width: 920px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 50px 0;
+  }
+}
+
+.intro-container {
+  padding: 60px 60px 30px 0;
+}
+@media (max-width: 800px) {
+  .intro-container {
+    padding: 0 0 30px 0;
+    max-width: 408px;
+    margin: 0 auto;
+  }
+}
+.intro-container img {
+  max-width: 127px;
+}
+.intro-container h1 {
+  font-size: 64px;
+  margin: 20px 0;
+}
+@media (max-width: 800px) {
+  .intro-container h1 {
+    font-size: 40px;
+  }
+}
+.intro-container p {
+  font-size: 20px;
+  max-width: 445px;
+}
+@media (max-width: 800px) {
+  .intro-container p {
+    font-size: 18px;
+  }
+}
+
+.form-container {
+  padding: 50px 30px;
+  border: 1px solid #ECEDF2;
+  border-radius: 24px;
+  position: relative;
+  max-width: 408px;
+  width: 100%;
+}
+.form-container .badge {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  width: 145px;
+  height: 46px;
+  background: #FFDD4D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+.form-container h2 {
+  margin: 0 0 18px 0;
+}
+.form-container label {
+  font-weight: bold;
+  display: block;
+}
+.form-container input {
+  border: 2px solid #ECEDF2;
+  padding: 0 17px;
+  color: #8E8E90;
+}
+.form-container input[type=text] {
+  width: 100%;
+  border-radius: 12px;
+  height: 44px;
+  margin: 6px 0px 18px 0px;
+}
+.form-container input[type=checkbox] {
+  margin-right: 8px;
+  opacity: 0;
+}
+.form-container label[for=checkbox] {
+  font-size: 13px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.form-container label[for=checkbox] .checkmark {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #ECEDF2;
+}
+.form-container label[for=checkbox] input:checked ~ .checkmark {
+  background: #FD0272;
+  border-color: #FD0272;
+}
+.form-container strong {
+  text-decoration: underline;
+  font-weight: 500;
+  padding-left: 5px;
+}
+.form-container input[type=submit] {
+  background: #FD0272;
+  color: white;
+  border-radius: 12px;
+  max-width: 348px;
+  width: 100%;
+  height: 54px;
+  font-weight: 500;
+  border: none;
+  font-size: 16px;
+  margin-top: 32px;
+}
+.form-container input[type=submit]:hover {
+  background: #d10761;
+}
