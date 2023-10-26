@@ -336,15 +336,32 @@ body p {
     margin: 0 auto;
   }
 }
+.intro-container a {
+  text-decoration: none;
+  color: #1E1F22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .intro-container img {
-  max-width: 127px;
+  max-width: 40px;
+  margin-right: 10px;
 }
 .intro-container h1 {
+  font-size: 20px;
+}
+.intro-container h2 {
   font-size: 64px;
   margin: 20px 0;
 }
 @media (max-width: 800px) {
-  .intro-container h1 {
+  .intro-container h2 {
     font-size: 40px;
   }
 }
@@ -382,9 +399,13 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.56px;
 }
-.form-container h2 {
+.form-container h3 {
+  font-size: 1.5em;
+  font-weight: 600;
   margin: 0 0 18px 0;
 }
 .form-container label {
@@ -443,15 +464,21 @@ body p {
   height: 16px;
   width: 16px;
   border: 2px solid #ECEDF2;
+  -webkit-transition: background 0.1s ease-out;
+  transition: background 0.1s ease-out;
 }
 .form-container label[for=checkbox] input:checked ~ .checkmark {
   background: #FD0272;
   border-color: #FD0272;
 }
-.form-container strong {
+.form-container a {
+  color: #1E1F22;
   text-decoration: underline;
   font-weight: 500;
   padding-left: 5px;
+}
+.form-container a:hover {
+  color: #FD0272;
 }
 .form-container input[type=submit] {
   background: #FD0272;
@@ -464,6 +491,10 @@ body p {
   border: none;
   font-size: 16px;
   margin-top: 32px;
+  -webkit-transition-duration: 0.05s;
+          transition-duration: 0.05s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 .form-container input[type=submit]:hover {
   background: #d10761;
