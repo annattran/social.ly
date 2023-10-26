@@ -119,11 +119,24 @@ body {
         margin: 0 auto;
     }
 
+    a {
+        text-decoration: none;
+        color: $blackFont;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
     img {
-        max-width: 127px;
+        max-width: 40px;
+        margin-right: 10px;
     }
 
     h1 {
+        font-size: 20px;
+    }
+
+    h2 {
         font-size: 64px;
         margin: 20px 0;
 
@@ -160,10 +173,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.56px;
     }
 
-    h2 {
+    h3 {
+        font-size: 1.5em;
+        font-weight: 600;
         margin: 0 0 18px 0;
     }
 
