@@ -177,7 +177,11 @@ body {
         font-size: 14px;
         border: 2px solid $borderGrey;
         padding: 0 17px;
-        color: $placeholderGrey;
+        color: $blackFont;
+
+        &::placeholder {
+            color: $placeholderGrey;
+        }
 
         &[type="text"] {
             width: 100%;

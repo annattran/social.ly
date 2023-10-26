@@ -396,6 +396,21 @@ body p {
   font-size: 14px;
   border: 2px solid #ECEDF2;
   padding: 0 17px;
+  color: #1E1F22;
+}
+.form-container input::-webkit-input-placeholder {
+  color: #8E8E90;
+}
+.form-container input::-moz-placeholder {
+  color: #8E8E90;
+}
+.form-container input:-ms-input-placeholder {
+  color: #8E8E90;
+}
+.form-container input::-ms-input-placeholder {
+  color: #8E8E90;
+}
+.form-container input::placeholder {
   color: #8E8E90;
 }
 .form-container input[type=text] {
