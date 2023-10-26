@@ -226,6 +226,7 @@ body {
             height: 16px;
             width: 16px;
             border: 2px solid $borderGrey;
+            transition: background 0.1s ease-out;
         }
 
         input:checked~.checkmark {
@@ -234,10 +235,15 @@ body {
         }
     }
 
-    strong {
+    a {
+        color: $blackFont;
         text-decoration: underline;
         font-weight: 500;
         padding-left: 5px;
+
+        &:hover {
+            color: $pinkFont;
+        }
     }
 
     input[type="submit"] {
@@ -251,6 +257,8 @@ body {
         border: none;
         font-size: 16px;
         margin-top: 32px;
+        transition-duration: 0.05s;
+        transition-timing-function: ease-out;
 
         &:hover {
             background: #d10761;
