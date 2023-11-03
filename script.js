@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const emailFormat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
-        if (name === '' || email == - '' || emailFormat.test(email) === false) {
+        if (name === '' || email === '' || !emailFormat.test(email)) {
             alert('Name and email must be filled out. Make sure email address is valid.')
         } else {
             if (checkbox === false) {
